@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultContainer = document.querySelector(".result");
   const BucharestLatitude = 44.4361414;
   const BucharestLongitude = 26.1027202;
-  const BUCHAREST_SUNRISE_11182019 = "2019-11-18T05:15:50+00:00";
-  const BUCHAREST_SUNSET_11182019 = "2019-11-18T14:45:43+00:00";
 
   mapboxgl.accessToken =
     "pk.eyJ1IjoiY2NhbXBlYW4iLCJhIjoiY2szNDV4b3J2MDV1ODNjcGV3aTZqZjI4NCJ9.ujCY3iPtmffDnzpnqnBzGg";
@@ -18,11 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const marker = new mapboxgl.Marker({ draggable: true })
     .setLngLat([BucharestLongitude, BucharestLatitude])
     .addTo(map);
-
-  resultContainer.innerHTML = `At the location with coordinates: longitude=<em>${BucharestLongitude}</em> and latitude=<em>${BucharestLatitude}</em> is ${dayOrNightTime(
-    BUCHAREST_SUNRISE_11182019,
-    BUCHAREST_SUNSET_11182019
-  )}.`;
 
   function dayOrNightTime(sunrise, sunset) {
     const nowUTC = new Date().toUTCString();
@@ -76,6 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error(error);
     }
   }
+
+  sunriseSunset(BucharestLatitude, BucharestLongitude, "today", 0);
 
   marker.on("dragend", onDragEnd);
 });
