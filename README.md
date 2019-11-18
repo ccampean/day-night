@@ -1,4 +1,4 @@
-[Demo](https://ccampean.github.io/day-night/).
+Demo: [github-pages](https://ccampean.github.io/day-night/) or [codepen](https://codepen.io/CostiCampean/full/abbPLgN).
 
 Dependencies:
 
