@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 #map {
@@ -8,4 +10,33 @@ body {
   top: 100px;
   bottom: 0;
   width: 100%;
+  z-index: -1;
+}
+
+.result {
+  font-weight: 400;
+}
+
+.advice,
+.result {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 830px) {
+  #map {
+    top: calc(100px + 5vh);
+  }
+}
+
+@media screen and (max-width: 492px) {
+  #map {
+    top: calc(100px + 10vh);
+  }
+}
+
+@media screen and (max-width: 325px) {
+  #map {
+    top: calc(100px + 20vh);
+  }
 }

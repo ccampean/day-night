@@ -13,10 +13,16 @@
       defer
       src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"
     ></script>
+    <script defer src="https://momentjs.com/downloads/moment.js"></script>
     <script src="./index.js"></script>
     <title>Day or night?</title>
   </head>
   <body>
+    <p class="advice">
+      Move the marker on the map, to know if it is day or night in that
+      location.
+    </p>
+    <h3 class="result"></h3>
     <div id="map"></div>
   </body>
 </html>
